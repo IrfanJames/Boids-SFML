@@ -1,0 +1,103 @@
+﻿  Boids_main.cpp
+D:\Programming\C++\Boids-SFML\Boids\Boids_Entity.h(15,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Entity.h(15,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boid.h(46,19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boid.h(48,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Handle.h(18,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Handle.h(19,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Classes.h(18,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Classes.h(18,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Classes.h(18,52): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_Classes.h(31,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(30,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(70,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(72,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(72,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(73,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(73,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(106,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(106,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(109,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(109,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(121,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(130,20): warning C4018: '<': signed/unsigned mismatch
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(136,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(136,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(136,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(161,89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(161,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(161,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(161,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(199,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(199,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(199,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(240,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(240,67): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(241,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(248,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(248,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(249,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(250,24): warning C4244: '/=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(253,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(264,35): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(282,117): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(310,11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(310,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(349,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(350,54): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(350,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(375,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(394,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(439,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(459,96): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(459,69): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(474,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(481,98): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(481,71): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(483,89): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(483,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(509,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(541,21): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(541,19): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(542,21): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Programming\C++\Boids-SFML\Boids\Boids_main.cpp(542,19): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
