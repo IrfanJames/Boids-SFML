@@ -1,0 +1,61 @@
+#pragma once
+
+#include "Boids_Entity.h"
+
+class Boid : public Entity {
+
+	float speed = 0, maxSpeed = 7;
+public:
+
+	Boid() {
+		name = "Boid";
+	}
+
+	void update() {
+
+		angle -= (int)(angle / 361) * 360;
+
+		dx += sin(angle * DegToRad) * 0.3f;
+		dy += -cos(angle * DegToRad) * 0.3f;
+
+		x += dx;
+		y += dy;
+
+		speed = sqrt(dx * dx + dy * dy);
+
+		if (speed >= maxSpeed) {
+			dx *= maxSpeed / speed;
+			dy *= maxSpeed / speed;
+		}
+
+		/*
+		if (x <= 40)		{ x = 40;		if (270 < angle) angle += 1.0f;	else angle -= 1.0f; }
+		if ((W - 40) <= x) { x = W - 40;	if (90 < angle)  angle += 1.0f;	else angle -= 1.0f; }
+		if (y <= 40)		{ y = 40;		if (180 < angle) angle += 1.0f;	else angle -= 1.0f; }
+		if ((H - 40) <= y)	{ y = H - 40;	if (180 < angle) angle += 1.0f;	else angle -= 1.0f; }
+		//*/
+
+		//*
+		if (x < 0) x = W;	if (W < x) x = 0;
+		if (y < 0) y = H;	if (H < y) y = 0;
+		//*/
+	}
+
+
+};
+
+
+/*
+		if (x <= 20)		{ x = 20;		if (270 <= angle) angle += 0.01f; else angle -= 0.01f; }
+		if ((W - 20) <= x)	{ x = W - 20;	if (90 <= angle) angle += 0.01f; else angle -= 0.01f; }
+		if (y <= 20)		{ y = 20;		if (180 >= angle) angle += 0.01f; else angle -= 0.01f; }
+		if ((H - 20) <= y)	{ y = H - 20;	if (180 >= angle) angle += 0.01f; else angle -= 0.01f; }
+//*/
+
+/*if (direction < -11 || 11 < direction) {
+			direction *= 11 / direction;
+		}
+
+		angle += direction*0.4;
+
+		angle = (int)angle % 361;*/

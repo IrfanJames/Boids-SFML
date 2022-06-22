@@ -1,0 +1,155 @@
+/*
+taskkill /F /IM Boids.exe
+*/
+
+#include <iostream>
+#include <list>
+#include "Boids_Classes.h"
+
+using namespace std;
+using namespace sf;
+
+float distance(Entity* a, Entity* b) {
+
+	return sqrt((a->x - b->x) * (a->x - b->x) + (a->y - b->y) * (a->y - b->y));
+}
+
+int main() {
+
+	RenderWindow app(VideoMode(W, H), "Boids", Style::Fullscreen);
+	//RenderWindow app(VideoMode(W, H), "Boids");
+	W = app.getSize().x; H = app.getSize().y;
+	app.setFramerateLimit(60);
+	app.setVerticalSyncEnabled(1);
+	srand(time(NULL));
+	time_t boolTime = clock();
+
+	Texture b0, b1, b2, b3;
+	b0.loadFromFile("image/Back.png");
+	b1.loadFromFile("image/Boid-Grey.png");
+	b2.loadFromFile("image/Boid-Red.png");
+	b3.loadFromFile("image/Boid-Yellow.png");
+
+	Sprite Back(b0);
+
+	list<Entity*> entities;
+
+
+	Animation sBoid;
+	for (int c = 0; c < 100; c++) {
+		Boid1_3 = rand() % 3 + 1;
+		//Boid1_3 = 1 + (c == 0 || c == 1);
+		switch (Boid1_3) {
+		case 1: sBoid.setAll(b1, 0, 0, 40, 54, 1, 0.2f); break;
+		case 2: sBoid.setAll(b2, 0, 0, 40, 54, 1, 0.2f); break;
+		case 3: sBoid.setAll(b3, 0, 0, 40, 54, 1, 0.2f); break;
+		default: sBoid.setAll(b1, 0, 0, 40, 54, 1, 0.2f); break;
+		}
+
+		Boid* b = new Boid();
+		b->setAll(sBoid, rand() % W, rand() % H, rand() % 361, 25);
+		b->serial = Boid1_3;
+		entities.push_back(b);
+	}
+
+	while (app.isOpen()) {
+		Event evnt;
+		while (app.pollEvent(evnt)) {
+			if (evnt.type == evnt.Closed) {
+				app.close();
+			}
+		}
+
+		//*
+		if (0.2f <= (float)((float)(clock() - boolTime) / CLOCKS_PER_SEC)) {
+			if (Keyboard::isKeyPressed(Keyboard::Num1)) { Separation = !(Separation); boolTime = clock(); cout << "\n-----------------------------------\n"; }
+			else if (Keyboard::isKeyPressed(Keyboard::Num2)) { Alignment = !(Alignment); boolTime = clock(); cout << "\n-----------------------------------\n"; }
+			else if (Keyboard::isKeyPressed(Keyboard::Num3)) { Cohesion = !(Cohesion); boolTime = clock(); cout << "\n-----------------------------------\n"; }
+		}
+		//*/
+
+		if (Keyboard::isKeyPressed(Keyboard::Escape)) { app.close(); cout << "\n\n\tESC Pressed\n"; }
+		cout << Separation << Alignment << Cohesion << " " << ((Separation != 0) + (Alignment != 0) + (Cohesion != 0)) << endl;
+
+		for (auto e : entities) {///////////
+			float angleS = 0.0f, angleA = 0.0f, angleC = 0.0f;
+			float dxS = 0.0f, dxA = 0.0f, dxC = 0.0f;
+			float dyS = 0.0f, dyA = 0.0f, dyC = 0.0f;
+			int n = 0;
+
+			float Far = 100, mAngle = 0.0f;
+			float mX = 0.0f, mY = 0.0f, mag = 0.0f;
+
+			for (auto f : entities) {///////////
+				if (e == f || distance(e, f) >= Far) continue;
+				n++;
+
+				mX += f->x;
+				mY += f->y;
+				mAngle += f->angle;
+			}///////////
+
+
+			if (n != 0) {
+
+				if (Alignment != 0) {
+					angleA = ((mAngle / n) - e->angle) * 0.05f;
+				}
+
+				if (Cohesion != 0) {
+					//cout << mX / n << " : " << e->x << " : " << mY / n << " : " << e->y;
+					//angleC = ((atan2((mX / n - e->x), (mY / n - e->y)) * RadToDeg) - e->angle) * 0.008f;
+					angleC = ((atan2((W / 2 - e->x), (H / 2 - e->y)) * RadToDeg) - e->angle) * 0.08f;
+					//cout << "\t" << angleC << endl;
+				}
+
+			}
+
+			if ((Separation + Alignment + Cohesion) != 0) {
+				//cout << angleS << "\t" << angleA << "\t" << angleC << endl;
+
+				e->angle += ((angleS * Separation) + (angleA * Alignment) + (angleC * Cohesion)) / ((Separation != 0) + (Alignment != 0) + (Cohesion != 0));
+
+				e->dx += ((dxS * Separation) + (dxA * Alignment) + (dxC * Cohesion)) / ((Separation != 0) + (Alignment != 0) + (Cohesion != 0));
+				e->dy += ((dyS * Separation) + (dyA * Alignment) + (dyC * Cohesion)) / ((Separation != 0) + (Alignment != 0) + (Cohesion != 0));
+
+				if (Cohesion != 0) {
+					mag = sqrt((W / 2 - e->x) * (W / 2 - e->x) + (H / 2 - e->y) * (H / 2 - e->y));
+					dxC += sin(e->angle * DegToRad) * mag * 0.08f;
+					dyC += -cos(e->angle * DegToRad) * mag * 0.08f;
+				}
+
+			}
+		}///////////
+
+		cout << "\n\n\n";
+		
+		// ----------------------------------------	Update
+		for (auto c = entities.begin(); c != entities.end();) {
+			Entity* e = *c;
+
+			e->update();
+			e->anim.update();
+
+			if (e->life <= 0) {
+				c = entities.erase(c);
+				delete e;
+			}
+			else c++;
+		}
+
+		app.clear();
+		app.draw(Back);
+		for (auto d : entities) d->draw(app);
+
+		app.display();
+
+	}
+
+
+
+
+
+	system("pause");
+
+}

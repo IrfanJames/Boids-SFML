@@ -1,0 +1,21 @@
+#pragma once
+
+float DegToRad = 0.01745329f;
+float RadToDeg = 57.295779f;
+
+unsigned int W = 1800;
+unsigned int H = 1000;
+
+unsigned int NoOfBoids = 200;
+
+unsigned int Boid1_3 = 1;
+
+int Rules[2][3][3] = {
+	{{0,113,188}, {0,169,157}, {121,61,173}},
+	{{87,87,87}, {117,117,117}, {91,91,91,}}
+};
+
+float Separation = 0, Alignment = 0, Cohesion = 0;
+
+int R = 6, Sides = 3;
+

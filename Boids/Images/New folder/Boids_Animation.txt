@@ -1,0 +1,49 @@
+#pragma once
+
+#include "Boids_Global.h"
+#include "sfml/include/SFML/Graphics.hpp"
+using namespace sf;
+
+class Animation {
+public:
+	float frame, speed;
+	Sprite sprite;
+	std::vector<IntRect> frames;
+	Animation() { frame = 0; speed = 2; }///2 is by random///
+
+	Animation(Texture& t, int X, int Y, int Width, int Length, int Count, float Speed) {
+		frame = 0;
+		speed = Speed;
+
+		for (int c = 0; c < Count; c++) {
+			frames.push_back(IntRect(X + c * Width, Y, Width, Length));
+		}
+
+		sprite.setTexture(t);
+		sprite.setOrigin((float)(Width / 2), (float)(Length / 2));
+		sprite.setTextureRect(frames[0]);
+
+	}
+
+	void setAll(Texture& t, int X, int Y, int Width, int Length, int Count, float Speed) {
+		frame = 0;
+		speed = Speed;
+
+		for (int c = 0; c < Count; c++) {
+			frames.push_back(IntRect(X + c * Width, Y, Width, Length));
+		}
+
+		sprite.setTexture(t);
+		sprite.setOrigin((float)(Width / 2), (float)(Length / 2));
+		sprite.setTextureRect(frames[0]);
+
+	}
+
+	void update() {
+		frame += speed;
+		int n = frames.size();
+		frame = (frame >= n) * (frame - n) + (frame < n) * frame;
+		if (n > 0) sprite.setTextureRect(frames[(int)frame]);
+	}
+
+};

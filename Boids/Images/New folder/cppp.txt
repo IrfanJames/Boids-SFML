@@ -1,0 +1,17 @@
+ï»¿  Boids.cpp
+D:\Programming\C++\Boids\Boids_Entity.h(14,33): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids_Entity.h(14,44): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.h(39,18): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.h(40,18): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(24,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(58,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(71,20): warning C4018: '<': signed/unsigned mismatch
+D:\Programming\C++\Boids\Boids.cpp(77,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(77,39): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(77,27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(108,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(108,41): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(108,29): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(139,47): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(139,59): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+D:\Programming\C++\Boids\Boids.cpp(247,6): warning C4102: 'RESET': unreferenced label
