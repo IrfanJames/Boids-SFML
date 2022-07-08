@@ -18,7 +18,7 @@ int WinMain(
 //int main( int argc, char* argv[] ) {
 int main() {
 	//RenderWindow app(VideoMode(W, H), "Boids", Style::Fullscreen, ContextSettings(0));
-	RenderWindow app(VideoMode(W, H), "Boids", Style::Default, ContextSettings(0));
+	RenderWindow app(VideoMode(W, H), "Boids (Please Press Tab)", Style::Default, ContextSettings(0));
 	app.setVerticalSyncEnabled(1);
 
 	Image logo;
