@@ -16,9 +16,12 @@ int WinMain(
 //*/
 //int wmain(int argc, wchar_t** argv) {
 //int main( int argc, char* argv[] ) {
+//int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszArgument, int nCmdShow) {
+
 int main() {
 	//RenderWindow app(VideoMode(W, H), "Boids", Style::Fullscreen, ContextSettings(0));
-	RenderWindow app(VideoMode(W, H), "Boids (Please Press Tab)", Style::Default, ContextSettings(0));
+	sf::ContextSettings settings; settings.antialiasingLevel = 8;
+	RenderWindow app(VideoMode(W, H), "Boids (Please Press Tab)", Style::Default, settings);
 	app.setVerticalSyncEnabled(1);
 
 	Image logo;
@@ -29,15 +32,15 @@ int main() {
 	app.setFramerateLimit(60);
 	srand(time(NULL));
 	time_t frame = clock();
-	bool pressBool = 0, scroolBool = 0, nBoolDebug = 1;
+	bool pressBool = 0, scroolBool = 0, nBoolDebug = 0;
 
 	//Font menuFont;cout << "Hi ..\t" << c << endl;
 	////menuFont.loadFromFile("Fonts/FUTURA21.ttf");
 
-	wcout << "pl";
+	//wcout << "pl";
 
 	Shader Bloom;
-	cout << Bloom.loadFromFile("Bloom.frag", sf::Shader::Fragment) << " : :: rfvtgb\n";
+	//cout << Bloom.loadFromFile("Bloom.frag", sf::Shader::Fragment) << " : :: rfvtgb\n";
 	Clock _t_clock;
 	float sec = _t_clock.getElapsedTime().asSeconds();
 	
@@ -60,8 +63,8 @@ int main() {
 
 
 	Music bgSong;
-	bgSong.openFromFile("Audio/In This Shirt.ogg");
-	//bgSong.openFromFile("Audio/Onceagain.ogg");
+	//bgSong.openFromFile("Audio/In This Shirt.ogg");
+	bgSong.openFromFile("Audio/Onceagain.ogg");
 	bgSong.setVolume(10);
 	bgSong.setLoop(1);
 	//bgSong.play();
@@ -171,6 +174,10 @@ while(!End) {
 				End = 1;
 				entities.clear();
 			}
+			if (evnt.type == evnt.Resized) {
+				app.setView(sf::View(sf::FloatRect(0, 0, evnt.size.width, evnt.size.height)));
+			}
+
 			if (evnt.type == evnt.KeyPressed) {
 				if (evnt.key.code == Keyboard::M) { if (bgSong.getStatus() == bgSong.Playing) bgSong.pause(); else bgSong.play(); }
 
@@ -189,7 +196,7 @@ while(!End) {
 					else { Pause = 1;  cout << "\n------------------PAUSED-----------------\n"; bgSong.pause(); }
 				}
 
-				if (evnt.key.code == Keyboard::N) { nBoolDebug = !nBoolDebug; }
+				if (evnt.key.code == Keyboard::N) { nBoolDebug = !nBoolDebug; cout << "nBoolDebug: " << nBoolDebug; }
 				if (evnt.key.code == Keyboard::F) { FollowCursor = !FollowCursor; Predator = 0; cout << "F: " << FollowCursor << "P: " << Predator << "\n"; }
 				if (evnt.key.code == Keyboard::P) { Predator = !Predator; FollowCursor = 0;		cout << "F: " << FollowCursor << "P: " << Predator << "\n"; }
 
@@ -519,7 +526,10 @@ while(!End) {
 				//cout << n << " ";
 				//break;
 
+				if (nBoolDebug) break;
 			}///////////
+
+
 			//cout << mo << " ";
 			//cout << "\n\n";
 		}
@@ -535,6 +545,8 @@ while(!End) {
 				delete e;
 			}
 			else c++;
+
+			if (nBoolDebug) break;
 		}
 
 		Vertex line[] = {
