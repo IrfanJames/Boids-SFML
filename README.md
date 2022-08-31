@@ -16,13 +16,15 @@
 |Follow Cursor|`F`|
 |Preditor Mode|`P`|
 |||
-|Speed|`4th Slider`|
 |Menu|`Tab`|
 |Mute/Unmute|`M`|
 |Restart|`R`|
 |Pause/Play|`Space`|
 |Escape|`Esc`|
-* Move Cursor to change (green sector) in Menu to set the Feild-of-view of Boids
+
+### Menu (Press Tab)
+* Control Speed of Boids by 4th Slider
+* Move Cursor to change (green sector) to set the Feild-of-view of Boids
 
 ------------
 
