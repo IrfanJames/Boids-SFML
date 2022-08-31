@@ -16,6 +16,7 @@
 |Follow Cursor|`F`|
 |Preditor Mode|`P`|
 |||
+|Speed|`4th Slider`|
 |Menu|`Tab`|
 |Mute/Unmute|`M`|
 |Restart|`R`|
