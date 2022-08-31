@@ -2,8 +2,7 @@
 
 > Boids Algorithm implementation in C++ and SFML (for Graphics)
 
-! [](https://github.com/IrfanJames/Boids-SFML/blob/main/Boids/Images/Snapshot.png)
-
+![](https://github.com/IrfanJames/Boids-SFML/blob/main/Boids/Images/Snapshot.png)
 ------------
 | Controls  | Keys  |
 | ------------ | ------------ |
