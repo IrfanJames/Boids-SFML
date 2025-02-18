@@ -584,6 +584,7 @@ while(!End) {
 				//cout << m_MouseX << "\t" << m_MouseY << "\n";
 				app.draw(coolSector(distance(sectorPosition.x, sectorPosition.y, (float)m_MouseX, (float)m_MouseY), abs(atan2((sectorPosition.y - (float)m_MouseY), ((float)m_MouseX - sectorPosition.x))* RadToDeg)));
 
+
 				app.draw(sectorBird);
 				app.draw(tab[1]);
 
