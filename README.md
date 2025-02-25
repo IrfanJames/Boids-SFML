@@ -4,6 +4,12 @@
 
 ![](https://github.com/IrfanJames/Boids-SFML/blob/main/Boids/Images/Screenshot_2024-09-09.png)
 
+### Menu (Press Tab)
+* Control Speed of Boids by 4th Slider
+* Move the Cursor to change (green sector) to set the Feild-of-view of Boids
+
+![](https://github.com/IrfanJames/Boids-SFML/blob/main/Boids/Images/Screenshot_2024-10-22.png)
+
 ------------
 | Controls  | Keys  |
 | ------------ | ------------ |
@@ -23,14 +29,7 @@
 |Pause/Play|`Space`|
 |Escape|`Esc`|
 
-### Menu (Press Tab)
-* Control Speed of Boids by 4th Slider
-* Move the Cursor to change (green sector) to set the Feild-of-view of Boids
-
-![](https://github.com/IrfanJames/Boids-SFML/blob/main/Boids/Images/Screenshot_2024-10-22.png)
-
 ------------
-
 
 > Enjoy,
 >
